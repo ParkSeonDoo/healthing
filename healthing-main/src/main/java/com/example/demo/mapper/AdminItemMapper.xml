@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.demo.mapper.AdminItemMapper">
+	<!-- itemoffline 게시판리스트 -->
+    <select id="itemofflinist" resultType="com.example.demo.domain.ItemVO" parameterType="com.example.demo.domain.ItemVO">
+        SELECT
+            *
+        FROM itemoffline
+        WHERE istatus is NOT NUll
+    </select>
+	<!-- itemoffline 작성 -->
+    <insert id="itemoffinsert" parameterType="com.example.demo.domain.ItemVO">
+        INSERT INTO itemoffline
+		(icategory, ipurpose, itarget, ilavel, iphone, itool,ilocal, iaddr, icoachimg, icoachname, icoachinfo, icoachsummary, 
+		 ithumbnail, iweek, iweekcount, iprice, isale, ipeople, ititle, igoal, icontents, insertdate, istatus)
+		VALUES(#{icategory}, #{ipurpose}, #{itarget}, #{ilavel}, #{iphone}, #{itool}, #{ilocal}, #{iaddr}, #{icoachimg}, 
+			   #{icoachname}, #{icoachinfo}, #{icoachsummary},#{ithumbnail}, #{iweek}, #{iweekcount}, #{iprice}, #{isale}, #{ipeople}, #{ititle}, #{igoal}, #{icontents}, now(), #{istatus})
+    </insert>
+    <!-- itemoffline 게시글상세보기 -->
+    <select id="itemofflineview" parameterType="int" resultType="com.example.demo.domain.ItemVO">
+        SELECT
+            *
+        FROM itemoffline
+        WHERE
+            ino = #{ino}
+    </select>
+    <!-- itemoffline 게시글수정 -->
+    <update id="itemofflineupdate" parameterType="com.example.demo.domain.ItemVO">
+        UPDATE itemoffline
+            SET icategory=#{icategory}, ipurpose=#{ipurpose}, itarget=#{itarget}, ilavel=#{ilavel}, iphone=#{iphone}, itool=#{itool}, ilocal=#{ilocal}, iaddr=#{iaddr}, icoachimg=#{icoachimg}, 
+            	icoachname=#{icoachname}, icoachinfo=#{icoachinfo}, icoachsummary=#{icoachsummary}, ithumbnail=#{ithumbnail}, iweek=#{iweek}, iweekcount=#{iweekcount}, iprice=#{iprice}, isale=#{isale}, ipeople=#{ipeople}, ititle=#{ititle}
+            	, igoal=#{igoal}, icontents=#{icontents}
+        WHERE ino = #{ino}
+    </update>  
+    <!-- itemoffline 게시글삭제 -->
+ 	<update id="itemofflindelete" parameterType="int">
+		UPDATE itemoffline
+            SET istatus = NUll
+        WHERE ino = #{ino}
+    </update>
+    
+    
+    <!-- itemonline 게시판리스트 -->
+    <select id="itemonlinist" resultType="com.example.demo.domain.ItemVO" parameterType="com.example.demo.domain.ItemVO">
+        SELECT
+            *
+        FROM itemonline
+        WHERE istatus is NOT NUll
+    </select>
+    <!-- itemonline 작성 -->
+    <insert id="itemoninsert" parameterType="com.example.demo.domain.ItemVO">
+        INSERT INTO itemonline
+		(icategory, ipurpose, itarget, ilavel, itool, icoachimg, icoachname, icoachinfo, icoachsummary, 
+		 ithumbnail, iweek, iweekcount, iweektime, iprice, isale, ipeople, ititle, igoal, icontents, insertdate, istatus)
+		VALUES(#{icategory}, #{ipurpose}, #{itarget}, #{ilavel}, #{itool}, #{icoachimg}, 
+			   #{icoachname}, #{icoachinfo}, #{icoachsummary},#{ithumbnail}, #{iweek}, #{iweekcount}, #{iweektime}, #{iprice}, #{isale}, #{ipeople}, #{ititle}, #{igoal}, #{icontents}, now(), #{istatus})
+    </insert>
+    <!-- itemonline 게시글상세보기 -->
+    <select id="itemonlineview" parameterType="int" resultType="com.example.demo.domain.ItemVO">
+        SELECT
+            *
+        FROM itemonline
+        WHERE
+            ino = #{ino}
+    </select>
+    <!-- itemonline 게시글수정 -->
+    <update id="itemonlineupdate" parameterType="com.example.demo.domain.ItemVO">
+        UPDATE itemonline
+            SET icategory=#{icategory}, ipurpose=#{ipurpose}, itarget=#{itarget}, ilavel=#{ilavel}, itool=#{itool},  icoachimg=#{icoachimg}, 
+            	icoachname=#{icoachname}, icoachinfo=#{icoachinfo}, icoachsummary=#{icoachsummary}, ithumbnail=#{ithumbnail}, iweek=#{iweek}, iweektime=#{iweektime}, iweekcount=#{iweekcount}, iprice=#{iprice}, isale=#{isale}, ipeople=#{ipeople}, ititle=#{ititle}
+            	, igoal=#{igoal}, icontents=#{icontents}
+        WHERE ino = #{ino}
+    </update>
+    <!-- itemonline 게시글삭제 -->
+ 	<update id="itemonlindelete" parameterType="int">
+		UPDATE itemonline
+            SET istatus = NUll
+        WHERE ino = #{ino}
+    </update>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.demo.mapper.UserMapper">
+	<select id="memberJoin" parameterType="com.example.demo.domain.memberVO">
+		INSERT INTO member
+		(uno, uid, upwd, uname, uphone, uemail, ubirth, ugender, ucm, ukg, uzipcode,
+		 uaddr1, uaddr2, ugrade, insertdate, updatedate)
+		VALUES(#{uno},#{uid},#{upwd},#{uname},#{uphone},#{uemail},#{ubirth},#{ugender},#{ucm},#{ukg},#{uzipcode},
+			   #{uaddr1},#{uaddr2},#{ugrade},now(),now())
+	</select>
+	<select id="uidChk" parameterType="String" resultType="int">
+		select count(*) from member where uid = #{uid}
+	</select>
+	<select id="uphoneChk" parameterType="String" resultType="int">
+		select count(*) from member where uphone = #{uphone}
+	</select>
+	<select id="uemailChk" parameterType="String" resultType="int">
+		select count(*) from member where uemail = #{uemail}
+	</select>
+	<select id="uloginChk" parameterType="String" resultType="int">
+		select count(*) from member where uid = #{uid} AND upwd = #{upwd}
+	</select>
+	<select id="umypageView" parameterType="String" resultType="com.example.demo.domain.memberVO">
+		select * from member where uid = #{sessionId}
+	</select> 
+</mapper>

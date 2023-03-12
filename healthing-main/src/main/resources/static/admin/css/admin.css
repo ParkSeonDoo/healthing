@@ -1,0 +1,227 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+body, talbe, th, td, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+   pre, form, fieldset, textarea, blockquote, span, * {
+   font-family: 'Noto Sans KR', sans-serif;
+}
+.adminWrap{
+	display:flex;
+	width:100%;
+	height:100%;
+}
+.adminGnb{
+	flex:1;
+	max-width:249px;
+	height:100vh;
+	background:#405189;
+	color:#fff;
+}
+
+.adminGnb .adminLogo{
+	width:100%;
+	text-align: center;
+	margin-bottom:30px;
+}
+.adminGnb .adminLogo a{
+	display: inline-block;
+	width:100%;
+	padding:20px 0;
+	font-size:25px;
+	color:#fff;
+}
+.adminGnb .adminGnbWrap{
+	width:100%;
+	height:85%;
+	overflow-y: auto;
+}
+/* 스크롤바 */
+.adminGnb .adminGnbWrap::-webkit-scrollbar {
+	width: 10px;
+	display:none;
+}
+.adminGnb .adminGnbWrap:hover::-webkit-scrollbar{
+	display:block;
+}
+.adminGnb .adminGnbWrap::-webkit-scrollbar-thumb {
+    background-color: #717FA0;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+.adminGnb .adminGnbWrap::-webkit-scrollbar-track {
+    background-color:none;
+    border-radius: 10px;
+}
+.adminGnb .adminGnbBox{
+	padding:0 20px 20px;
+	margin-bottom:20px;
+	border-bottom:1px solid #838fb9
+}
+.adminGnb .adminGnbBox .adminGnbTitle{
+	color:#838fb9;
+	margin-bottom:10px;
+}
+.adminGnb .adminGnbBox .adminGnbMenu{
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+.adminGnb .adminGnbBox .adminGnbMenu li a{
+	padding:8px 0;
+	width:100%;
+	display: inline-block;
+	color:#fff;
+	font-size:15px;
+}
+.adminGnb .adminGnbBox .adminGnbMenu li a i{
+	font-size:21px;
+	vertical-align: sub;
+	margin-right:5px;
+}
+.adminContent{
+	flex:2;
+	position:relative;
+	background:#F3F3F9;
+	overflow-y:auto;
+	max-height:100vh;
+}
+.adminHeader{
+	width:100%;
+	max-height:60px;
+	background:#fff;
+	text-align: right;
+	overflow: hidden;
+	padding:0 30px;
+	box-sizing: border-box;
+}
+.adminHeader ul{
+	float:right;
+	overflow: hidden;
+	margin-right:10px;
+}
+.adminHeader ul li{
+	float:left;
+}
+.adminHeader ul li a{
+	font-size:18px;
+	padding:20px 10px;
+	display: inline-block;
+	cursor: pointer;
+}
+.adminHeader .adminHeaderName{
+	float:left;
+	padding:22px 30px;
+	background:#F3F3F9;
+}
+.adminContentBox{
+	padding:30px;
+}
+.adminDashboardBox{
+	display: flex;
+	margin-bottom:30px;
+}
+.adminDashboard{
+	flex:1;
+	padding:30px;
+	background:#fff;
+	box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
+	border-radius: 3px;
+	position:relative;
+	margin-right:20px;
+	transition: all .3s ease-in-out;
+	top:0;
+}
+.adminDashboard:hover{
+	top:-3px;
+	box-shadow: 2px 4px 8px rgb(56 65 74 / 15%);
+}
+.adminDashboard:last-child{
+	margin-right:0;
+}
+.adminDashboard div:first-child{
+	color:#878a99;
+	margin-bottom:30px;
+}
+.adminDashboard div:nth-child(2){
+	font-size:21px;
+	font-weight: bold;
+	margin-bottom:30px;
+}
+.adminDashboard div:nth-child(3) a{
+	color:#405189;
+	text-decoration: underline;
+}
+.adminDashboardIcon{
+	position:absolute;
+	bottom:20px;
+	right:20px;
+	padding:15px;
+	border-radius: 3px;
+}
+.adminDashboardIcon i{
+	font-size:21px;
+}
+.adminDashboardIcon.green{
+	background:rgba(10,179,156,.18);
+	color:rgb(10,179,156);
+}
+.adminDashboardIcon.blue{
+	background:rgba(41,156,219,.18);
+	color:rgb(41,156,219);
+}
+.adminDashboardIcon.yellow{
+	background:rgba(247,184,75,.18);
+	color:rgb(247,184,75);
+}
+.adminDashboardIcon.purple{
+	background:rgba(64,81,137,.18);
+	color:rgb(64,81,137);
+}
+.adminIndexListBox{
+	display: flex;
+	flex-wrap: wrap;
+}
+.adminIndexList:nth-child(2n){
+	margin-right:0;
+}
+.adminIndexList{
+	flex:1;
+	min-width:40%;
+	background:#fff;
+	margin-right:20px;
+	padding-bottom:20px;
+	box-shadow: 0 1px 2px rgb(56 65 74 / 15%);
+    border-radius: 3px;
+    margin-bottom:30px;
+}
+.adminIndexListTitle{
+	width:100%;
+	font-size:18px;
+	padding:20px 30px;
+	color:#495057;
+	border-bottom:1px solid #E9EBEC;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.adminIndexListTitle span{
+	float: left;
+}
+.adminIndexListTitle a{
+	float: right;
+	font-size:15px;
+	font-weight: bold;
+}
+.adminIndexListTitle a i{
+	vertical-align: middle;
+}
+.adminIndexList table{
+	width:100%;
+}
+.adminIndexList table tr th,
+.adminIndexList table tr td{
+	border-bottom:1px solid #E9EBEC;
+	padding:15px 0;
+}
+.adminIndexList table tr td{
+	text-align:center;
+}

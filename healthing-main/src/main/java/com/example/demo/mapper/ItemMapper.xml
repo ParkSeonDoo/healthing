@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.demo.mapper.ItemMapper">
+	<!-- 오프라인 게시판리스트 -->
+    <select id="itemofflinist" resultType="com.example.demo.domain.ItemVO" parameterType="com.example.demo.domain.ItemVO">
+        SELECT
+            *
+        FROM itemoffline
+        WHERE istatus is NOt NUll
+    </select>
+	<!-- 오프라인 게시글상세보기 -->
+    <select id="itemofflineview" parameterType="int" resultType="com.example.demo.domain.ItemVO">
+        SELECT
+            *
+        FROM itemoffline
+        WHERE
+            ino = #{ino}
+    </select>
+    
+	<!-- 오프라인 게시판리스트 -->
+    <select id="itemonlinist" resultType="com.example.demo.domain.ItemVO" parameterType="com.example.demo.domain.ItemVO">
+        SELECT
+            *
+        FROM itemonline
+        WHERE istatus is NOt NUll
+    </select>
+	<!-- 오프라인 게시글상세보기 -->
+    <select id="itemonlineview" parameterType="int" resultType="com.example.demo.domain.ItemVO">
+        SELECT
+            *
+        FROM itemonline
+        WHERE
+            ino = #{ino}
+    </select>
+</mapper>

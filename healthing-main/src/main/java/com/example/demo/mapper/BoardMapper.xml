@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.demo.mapper.BoardMapper">
+	
+	<!-- boardquestion 비밀번호확인 -->
+	<select id="questionChk" resultType="String" parameterType="int">
+		SELECT
+			bpwd
+		FROM question
+		WHERE bno = #{bno}
+	</select>
+	<!-- boardquestion 리스트 -->
+	<select id="questionlist" resultType="com.example.demo.domain.BoardVO" parameterType="com.example.demo.domain.BoardVO">
+		SELECT
+			*
+		FROM question
+		WHERE bstatus is NOT NUll
+	</select>
+	<!-- boardwriter 글쓰기작성자 -->
+	<select id="boardwrite" parameterType="String" resultType="com.example.demo.domain.memberVO">
+		SELECT *
+		FROM member
+		WHERE uid = #{sessionId}
+	</select>
+	<!-- boardquestion 글쓰기 -->
+	<insert id="questioninsert" parameterType="com.example.demo.domain.BoardVO">
+		INSERT INTO question
+		(bcategory, bpwd, btitle, bcontents, bfile, bstatus, bwritedate, bwriter)
+		VALUES(#{bcategory}, #{bpwd}, #{btitle},#{bcontents}, #{bfile}, #{bstatus}, now(), #{bwriter})
+	</insert>
+	<!-- boardquestion 상세보기 -->
+	<select id="questionview" resultType="com.example.demo.domain.BoardVO" parameterType="int">
+		SELECT
+			*
+		FROM question
+		WHERE
+			bno = #{bno}
+	</select>
+	<!-- boardquestion 수정 -->
+	<update id="questionupdate" parameterType="com.example.demo.domain.BoardVO">
+		UPDATE question
+			SET bcategory=#{bcategory}, btitle=#{btitle}, bcontents=#{bcontents}, bfile=#{bfile}
+		WHERE	bno = #{bno}
+	</update>
+	<!-- boardquestion 게시글삭제 -->
+ 	<update id="questiondelete" parameterType="int">
+		UPDATE question
+			SET bstatus = NUll
+		WHERE bno = #{bno}
+	</update>
+	
+	<!-- boardnotice 리스트 -->
+	<select id="noticelist" resultType="com.example.demo.domain.BoardVO" parameterType="com.example.demo.domain.BoardVO">
+		SELECT
+			*
+		FROM notice
+		WHERE bstatus is NOT NUll
+	</select>
+	<!-- boardnotice 글쓰기작성자 -->
+	<select id="noticewrite" parameterType="String" resultType="com.example.demo.domain.memberVO">
+		SELECT *
+		FROM member
+		WHERE uid = #{sessionId}
+	</select>
+	<!-- boardnotice 글쓰기 -->
+	<insert id="noticeinsert" parameterType="com.example.demo.domain.BoardVO">
+		INSERT INTO notice
+		(btitle, bcontents, bfile, bstatus, bwritedate, bwriter, bviews)
+		VALUES(#{btitle},#{bcontents}, #{bfile}, #{bstatus}, now(), #{bwriter}, #{bviews})
+	</insert>
+	<!-- boardnotice 상세보기 -->
+	<select id="noticeview" resultType="com.example.demo.domain.BoardVO" parameterType="int">
+		SELECT
+			*
+		FROM notice
+		WHERE
+			bno = #{bno}
+	</select>
+	<!-- boardnotice 수정 -->
+	<update id="noticeupdatddate" parameterType="com.example.demo.domain.BoardVO">
+		UPDATE notice
+			SET btitle=#{btitle}, bcontents=#{bcontents}, bfile=#{bfile}
+		WHERE	bno = #{bno}
+	</update>
+	<!-- boardnotice 게시글삭제 -->
+ 	<update id="noticedelete" parameterType="int">
+		UPDATE notice
+			SET bstatus = NUll
+		WHERE bno = #{bno}
+	</update>
+	
+	<!-- boardpartner 리스트 -->
+	<select id="partnerlist" resultType="com.example.demo.domain.BoardVO" parameterType="com.example.demo.domain.BoardVO">
+		SELECT
+			*
+		FROM partner
+		WHERE bstatus is NOT NUll
+	</select>
+	<!-- boardpartner 글쓰기작성자 -->
+	<select id="partnerwrite" parameterType="String" resultType="com.example.demo.domain.memberVO">
+		SELECT *
+		FROM member
+		WHERE uid = #{sessionId}
+	</select>
+	<!-- boardpartner 글쓰기 -->
+	<insert id="partnerinsert" parameterType="com.example.demo.domain.BoardVO">
+		INSERT INTO partner
+		(bcategory, btitle, bcontents, bfile, bstatus, bwritedate, bwriter, bviews)
+		VALUES(#{bcategory}, #{btitle},#{bcontents}, #{bfile}, #{bstatus}, now(), #{bwriter}, #{bviews})
+	</insert>
+	<!-- boardpartner 상세보기 -->
+	<select id="partnerview" resultType="com.example.demo.domain.BoardVO" parameterType="int">
+		SELECT
+			*
+		FROM partner
+		WHERE
+			bno = #{bno}
+	</select>
+	<!-- boardnotice 수정 -->
+	<update id="partnerupdatddate" parameterType="com.example.demo.domain.BoardVO">
+		UPDATE partner
+			SET bcategory=#{bcategory}, btitle=#{btitle}, bcontents=#{bcontents}, bfile=#{bfile}
+		WHERE	bno = #{bno}
+	</update>
+	<!-- boardnotice 게시글삭제 -->
+ 	<update id="partnerdelete" parameterType="int">
+		UPDATE partner
+			SET bstatus = NUll
+		WHERE bno = #{bno}
+	</update>
+</mapper>

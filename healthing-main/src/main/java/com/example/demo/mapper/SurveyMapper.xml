@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.demo.mapper.SurveyMapper">
+	<select id="surveyInsert" parameterType="com.example.demo.domain.SurveyVO">
+		INSERT INTO survey
+		(sno, ssleep, smeal, squality, slevel, scount, scm, skg, sstatus, insertdate, uno)
+		VALUES(#{sno},#{ssleep},#{smeal},#{squality},#{slevel},#{scount},#{scm},#{skg},#{sstatus},now(),#{uno})
+	</select>
+	<select id="uresultViewOne" parameterType="String" resultType="com.example.demo.domain.memberVO">
+        SELECT * FROM member WHERE uid = #{uid} 
+	</select>
+	<select id="surveyResult" parameterType="String" resultType="int">
+        SELECT uno FROM member WHERE uid = #{uid} 
+	</select>
+	<select id="surveySession" parameterType="int" resultType="com.example.demo.domain.SurveyVO">
+        SELECT * FROM survey WHERE uno = #{sessionuno} order by sno desc limit 1
+	</select>
+</mapper>

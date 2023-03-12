@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+/* membermanage part */
+
+.adminMemberListTable{
+	width: 100%;
+	max-width: 1000px;
+	box-shadow: rgba(0, 0, 0, 0.08) 1px 0px 20px !important;
+	border-radius: 20px;
+	background-color: #ffffff;
+	padding: 20px 20px 15px;
+	margin: 0 auto 30px;
+}
+.adminMemberListTableTwo{
+	border-spacing: 0px;
+	width: 100%;
+}
+.adminMemberListTableTwo tr{
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+}
+.adminMemberListTableTwo tr:last-child{
+	border: 0;
+}
+.adminMemberListTableTwo tr th:nth-child(1),
+.adminMemberListTableTwo tr td:nth-child(1){
+	width: 10%;
+}
+.adminMemberListTableTwo tr th:nth-child(2){
+	width: 10%;
+}
+.adminMemberListTableTwo tr th:nth-child(3),
+.adminMemberListTableTwo tr td:nth-child(3){
+	width: 10%;
+}
+.adminMemberListTableTwo tr th:nth-child(4),
+.adminMemberListTableTwo tr td:nth-child(4){
+	width: 15%;
+}
+.adminMemberListTableTwo tr th:nth-child(5),
+.adminMemberListTableTwo tr td:nth-child(5){
+	width: 15%;
+}
+.adminMemberListTableTwo tr th:nth-child(6),
+.adminMemberListTableTwo tr td:nth-child(6) {
+    width: 15%;
+}
+.adminMemberListTableTwo tr th,
+.adminMemberListTableTwo tr td{
+	padding: 20px 5px;
+	text-align: center;
+}
+.adminMemberListTableTwo tr td:last-child{
+	border: 0;
+}
+.adminMemberTopTitle{
+	margin-bottom:35px;
+}
+
+.adminMemberSearchMain{
+	width:100%;
+	border:1px solid #dedede;
+	margin-bottom: 20px;
+}
+.adminMemberSearchMain th{
+	background:#444;
+	color:#fff;
+	padding: 10px 0;
+}
+.adminMemberSearchMain td{
+	padding:5px 0 5px 10px;
+}
+.adminMemberSearchMain select{
+	width:15%;
+	padding:5px;
+	border:1px solid #dedede;	
+}
+.adminMemberSearchMain input{
+	width:30%;
+	padding:5px;
+	border:1px solid #dedede;	
+}
+.adminMemberSearchBtn{
+	text-align:center;
+	margin-bottom:25px;
+}
+.adminMemberSearchBtn input{
+	border:none;
+	background:#444;
+	color:#fff;
+	padding:5px 8px;
+	border-radius:3px;
+}
+.adminMemberListCat span{
+	padding: 5px 12px;
+}
+.adminMemberModifyBtn{
+	border:none;
+	background:#405189;
+	color:#fff;
+	border-radius:3px;
+    padding: 4px 9px;
+}
+.adminMemberlistPage{
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.adminMemberlistPage ul{
+	display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+}
+.adminMemberlistPage ul li{
+	margin: 5px;
+}
+.adminMemberlistPage ul li:last-child {
+	text-align: right;
+}
+.adminMemberlistPage ul li a{
+	border-radius: 6px;
+    padding: 10px 15px;
+    display: inline-block;
+    background-color: #f2f2f2;
+    color: #999;
+}
+.adminMemberlistPage ul li a:hover{
+	background-color: #dfdfdf;
+}
+.adminMemberlistPageBtn a.on{
+	background-color: #122233;
+	color: #fff;
+}
+.adminMemberlistPageBtn a.on:hover{
+	background-color: #1e3b59;
+}
+.adminMemberlistBtn{
+	background-color: #122233;
+	padding: 10px 20px;
+	color: #fff;
+	border-radius: 6px;
+	position: absolute;
+	top: 5px;
+	right: 20px;
+}
+
+/* memberservey part */
+
+.adminMemberServeyTable{
+	border-spacing: 0px;
+	width: 100%;
+}
+.adminMemberServeyTable tr{
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+}
+.adminMemberServeyTable tr:last-child{
+	border: 0;
+}
+.adminMemberServeyTable tr th:nth-child(1),
+.adminMemberServeyTable tr td:nth-child(1){
+	width: 10%;
+}
+.adminMemberServeyTable tr th:nth-child(2){
+	width: 10%;
+}
+.adminMemberServeyTable tr th:nth-child(3),
+.adminMemberServeyTable tr td:nth-child(3){
+	width: 10%;
+}
+.adminMemberServeyTable tr th:nth-child(4),
+.adminMemberServeyTable tr td:nth-child(4){
+	width: 10%;
+}
+.adminMemberServeyTable tr th:nth-child(5),
+.adminMemberServeyTable tr td:nth-child(5){
+	width: 10%;
+}
+.adminMemberServeyTable tr th:nth-child(6),
+.adminMemberServeyTable tr td:nth-child(6) {
+    width: 15%;
+}
+.adminMemberServeyTable tr th,
+.adminMemberServeyTable tr td{
+	padding: 20px 5px;
+	text-align: center;
+}
+.adminMemberServeyTable tr td:last-child{
+	border: 0;
+}
+.boardEtc{
+	background-color: #E6F7FA;
+	color: #00bcd4;
+}
+.boardRed{
+	background-color: #fee9e7;
+	color: #f88736;
+}
+.boardGreen{
+	background-color: #e1f3f1;
+	color: #009688;
+}
+.boardPurple{
+	background-color: #ede8f7;
+	color: #8e42b9;
+}
+.boradListCat span{
+	padding: 5px 12px;
+}
+
+/* payment part */
+
+.adminpaymentTab{
+	width:100%;
+	overflow:hidden;
+	text-align:center;
+	background:#F3F3F9;
+}
+.paymentTabLeft{
+	width:50%;
+	float:left;
+	padding:20px 0;
+}
+.paymentTabLeft a{
+	display:block;
+	font-size:16px;
+	font-weight:500;
+	letter-spacing: 1.5px;
+	opacity:0.6;
+}
+.paymentTabRight{
+	width:50%;
+	float:right;
+	background:#8e42b9;
+	padding:20px 0;	
+}
+.paymentTabRight a{
+	display:block;
+	font-size:16px;
+	color:#fff;
+	font-weight:500;	
+    letter-spacing: 1.5px;	
+}
+
+.adminPaymentTable tr{
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+}
+.adminPaymentTable tr:last-child{
+	border: 0;
+}
+.adminPaymentTable tr th:nth-child(1),
+.adminPaymentTable tr td:nth-child(1){
+	width: 10%;
+}
+.adminPaymentTable tr th:nth-child(2){
+	width: 13%;
+}
+.adminPaymentTable tr th:nth-child(3),
+.adminPaymentTable tr td:nth-child(3){
+	width: 13%;
+}
+.adminPaymentTable tr th:nth-child(4),
+.adminPaymentTable tr td:nth-child(4){
+	width: 13%;
+}
+.adminPaymentTable tr th:nth-child(5),
+.adminPaymentTable tr td:nth-child(5){
+	width: 13%;
+}
+.adminPaymentTable tr th:nth-child(6),
+.adminPaymentTable tr td:nth-child(6) {
+    width: 13%;
+}
+.adminPaymentTable tr th,
+.adminPaymentTable tr td{
+	padding: 20px 5px;
+	text-align: center;
+}
+.adminPaymentTable tr td:last-child{
+	border: 0;
+}

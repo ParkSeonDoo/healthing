@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_chev_right</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_chev_right">
+            <g>
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0.07" x="1.13686838e-13" y="0" width="30" height="30" rx="3"></rect>
+                <path d="M21.6661851,12.5349474 L14.9998765,19.2003447 L8.33402348,12.535403 C7.88887389,12.0897978 7.88887389,11.368537 8.33402348,10.9242987 C8.77917306,10.4791491 9.49997822,10.4796047 9.9451278,10.9242987 L15.0003321,15.9785917 L20.0564477,10.923843 C20.5015973,10.4791491 21.2224024,10.4791491 21.6670964,10.923843 C22.1113347,11.3689926 22.1113347,12.0897978 21.6661851,12.5349474 Z" id="Path" fill="#888888" fill-rule="nonzero" transform="translate(15.000161, 14.895334) rotate(-90.000000) translate(-15.000161, -14.895334) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

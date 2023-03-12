@@ -1,0 +1,285 @@
+@charset "UTF-8";
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	  -webkit-appearance: none;
+	  margin: 0;
+}
+/* adminitemlist */
+.adminitemEtc{
+	background-color: #E6F7FA;
+	color: #00bcd4;
+}
+.adminitemRed{
+	background-color: #fee9e7;
+	color: #f88736;
+}
+.adminitemGreen{
+	background-color: #e1f3f1;
+	color: #009688;
+}
+.adminitemPurple{
+	background-color: #ede8f7;
+	color: #8e42b9;
+}
+.adminitemTable{
+	width: 100%;
+	max-width: 1000px;
+	box-shadow: rgba(0, 0, 0, 0.08) 1px 0px 20px !important;
+	border-radius: 20px;
+	background-color: #ffffff;
+	padding: 20px 20px 15px;
+	margin: 0 auto 30px;
+}
+.adminitemTopTitle{
+	margin-bottom: 35px;
+}
+.adminitemSearch{
+	width: 100%;
+	margin-bottom: 25px;
+}
+.adminitemSearch table{
+	border: 1px solid  #ddd;
+	border-radius: 6px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.adminitemSearch table tr th{
+	padding: 10px 0;
+	background-color: #122233; 
+	color: #fff;
+}
+.adminitemSearch table tr td{
+	padding: 5px 0 5px 10px;
+}
+.adminitemSearch select{
+	width: 15%;
+    padding: 5px;
+    border-color: #DEDEDE;
+}
+.adminitemSearch table input{
+    padding: 5px;
+    border: 1px solid #DEDEDE;
+    width: 30%;
+}
+.adminitemSearBtn{
+	width: 100%;
+	text-align: center;
+}
+.adminitemSearBtn input{
+	background-color: #122233;
+	color: #fff;
+	border: 0;
+	border-radius: 6px;
+	padding: 5px 10px;
+}
+.adminitemTableList{
+	border-spacing: 0px;
+	width: 100%;
+}
+.adminitemTableList tr{
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+}
+.adminitemTableList tr:last-child{
+	border: 0;
+}
+.adminitemTableList tr th:nth-child(1),
+.adminitemTableList tr td:nth-child(1){
+	width: 3%;
+}
+.adminitemTableList tr th:nth-child(2){
+	width: 7%;
+}
+.adminitemTableList tr th:nth-child(3),
+.adminitemTableList tr td:nth-child(3){
+	width: 7%;
+}
+.adminitemTableList tr th:nth-child(4),
+.adminitemTableList tr td:nth-child(4){
+	text-align: left;
+	width: 47%;
+}
+.adminitemTableList tr th,
+.adminitemTableList tr td{
+	padding: 20px 5px;
+	text-align: center;
+}
+.adminitemTableList tr td:last-child{
+	border: 0;
+}
+.adminitemCat span{
+	padding: 5px 12px;
+}
+.adminitemreset{
+	background-color: #122233; 
+	color: #fff;
+	border-radius: 3px;
+	border: 0;
+	padding: 2px 5px;
+}
+.adminitemPage{
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.adminitemPage ul{
+	display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+}
+.adminitemPage ul li{
+	margin: 5px;
+}
+.adminitemPage ul li:last-child {
+	text-align: right;
+}
+.adminitemPage ul li a{
+	border-radius: 6px;
+    padding: 10px 15px;
+    display: inline-block;
+    background-color: #f2f2f2;
+    color: #999;
+}
+.adminitemPage ul li a:hover{
+	background-color: #dfdfdf;
+}
+.adminitemPageBtn a.on{
+	background-color: #122233;
+	color: #fff;
+}
+.adminitemPageBtn a.on:hover{
+	background-color: #1e3b59;
+}
+.adminitemBtn{
+	background-color: #122233;
+	padding: 10px 20px;
+	color: #fff;
+	border-radius: 6px;
+	position: absolute;
+	top: 5px;
+	right: 20px;
+}
+
+
+
+/* adminitemwrite */
+.itemWriteDetail{
+	width: 70%;
+	box-shadow: 0 4px 8px rgb(0 0 0 / 10%), 0 6px 16px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    background-color: #fff;
+   	margin: 10px auto 0;
+   	padding: 40px 30px;
+}
+.itemWriteDetail select{
+	min-width: 15%;
+	padding: 10px;
+	border-color: #DEDEDE;
+	margin: 0 3px;
+}
+.adminitemwrite{
+	border-top:1px solid #bbb;
+	border-bottom:1px solid #bbb;
+	margin:15px 0 40px;
+	width:100%;
+}
+.adminitemwrite tr td img{
+	width: 200px;
+}
+.adminitemhead{
+	width: 10%;
+}
+.adminitemwrite input[type="text"]{
+	height:30px;
+	padding:0 10px;
+	border:1px solid #DEDEDE;
+	margin-right: 5px;
+}
+.adminitemwrite input:focus{
+    border-color:#000000;
+    outline: none;
+	transition: 0.8s; 
+}
+.adminitemwrite span{
+    position: relative;
+    display: inline-block;
+    margin: -1px 5px 0 5px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+.adminitemwrite button{
+	background-color:#a3a1a1;
+	color:#fff;
+	font-weight:bold;
+	border:none;
+    padding: 8px 15px 6px;
+	margin-left:5px;
+}
+.adminitemwrite tr{
+	border-bottom:1px solid #DEDEDE;
+}
+.adminitemwrite tr th,
+.adminitemwrite tr td{
+	text-align:left;
+	padding : 10px 20px;
+}
+.adminitemwrite th{
+	background-color:#EFEFEF;
+	width:10%;
+}
+.adminitemwrite td{
+	background-color:#fff;
+	width: 22%;
+}
+
+.adminitemwrite tr th,
+.adminitemwrite tr td{
+	padding: 15px 20px;
+}
+.itemaddr{
+	width: 100%;
+}
+.iteminfo{
+	width: 70%;
+}
+.itemIntile{
+	width: 70%;
+}
+.itemGoal .ck.ck-editor__editable_inline>:last-child {
+    height: 200px;
+}
+.itemContents .ck.ck-editor__editable_inline>:last-child {
+    height: 350px;
+}
+.itemgoal{
+	width: 100%;
+	padding: 10px;
+	resize: vertical;
+	min-height: 180px;
+	border-color: #DEDEDE; 
+}
+.itemcontents{
+	width: 100%;
+	padding: 10px;
+	resize: vertical;
+	min-height: 320px;
+	border-color: #DEDEDE; 
+}
+.itemWriteBtn{
+	text-align: center;
+}
+.itemWriteBtn input{
+	background-color: #122233;
+	padding: 7px 20px;
+	color: #fff;
+	border-radius: 6px;
+	border: 0;
+}
+.itemWriteBtn input{
+	margin: 0 10px;
+}
+
+
+
