@@ -52,7 +52,7 @@
 				<span>어떤 운동을 해야 할지 고민이라면,</span>
 				<span>
 					<b>헬싱</b>
-					에서 찾아보세요!!
+					에서 찾아보세요!!!
 				</span>
 			</h3>
 			<img class="emoji" src="/image/seondooimage/smile.svg">
